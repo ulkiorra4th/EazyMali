@@ -1,6 +1,6 @@
 namespace MailChecker.Content.Data;
 
-public interface IHtmlParser
+internal interface IHtmlParser
 {
     public (string, string) Parse(string filePath);
 }

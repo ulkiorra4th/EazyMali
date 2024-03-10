@@ -2,7 +2,7 @@ using System.Text;
 
 namespace MailChecker.Content.Data;
 
-public class HtmlParser : IHtmlParser
+internal class HtmlParser : IHtmlParser
 {
     public (string, string) Parse(string filePath)
     {

@@ -2,6 +2,29 @@ namespace MailChecker.Content;
 
 public interface IMailContentBuilder
 {
-    public MailContent BuildMailContent(string subject, string body, string confirmLink, bool isBodyHtml = false);
-    public MailContent BuildMailContentFromHtml(string htmlFilePath, string confirmLink);
+    /// <summary>
+    /// The symbol in place of which a link to mail confirmation will be inserted.
+    /// </summary>
+    public char InsertLinkSymbol { get; set; }
+    
+    /// <summary>
+    /// Creates an instance of MailContent.
+    /// </summary>
+    /// <param name="subject">The subject of the mail</param>
+    /// <param name="body">The body of the mail</param>
+    /// <param name="confirmationLink">Individual link to confirm email</param>
+    /// <param name="isBodyHtml"></param>
+    /// <returns>Mail content</returns>
+    public MailContent BuildMailContent(string subject, string body, string confirmationLink, bool isBodyHtml = false);
+    
+    /// <summary>
+    /// Creates an instance of MailContent from HTML file.
+    /// Subject and body of the mail in the file should be separated by "---".
+    /// </summary>
+    /// <param name="htmlFilePath">The path to the HTML file</param>
+    /// <param name="confirmationLink">Individual link to confirm email</param>
+    /// <exception cref="InvalidDataException"></exception>
+    /// <exception cref="FileNotFoundException"></exception>
+    /// <returns>Mail content</returns>
+    public MailContent BuildMailContentFromHtml(string htmlFilePath, string confirmationLink);
 }

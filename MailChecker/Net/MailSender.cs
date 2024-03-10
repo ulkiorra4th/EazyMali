@@ -9,7 +9,7 @@ public class MailSender : IMailSender
     private readonly MailAddress _fromAddress;
     private readonly string _fromMailPassword;
     
-    private string _smtpHost;
+    private string? _smtpHost;
     private int _smtpPort;
     
     public MailSender(MailAddress fromAddress, string fromMailPassword)
@@ -30,7 +30,7 @@ public class MailSender : IMailSender
         _smtpPort = port;
     }
 
-    public async Task SendMail(MailAddress to, MailContent content)
+    public async Task SendMailAsync(MailAddress to, MailContent content)
     {
         var message = new MailMessage(_fromAddress, to)
         {
