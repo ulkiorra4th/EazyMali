@@ -6,6 +6,11 @@ public interface IMailContentBuilder
     /// The symbol in place of which a link to mail confirmation will be inserted.
     /// </summary>
     public char InsertLinkSymbol { get; set; }
+
+    /// <summary>
+    /// String that separates the header and body of a mail
+    /// </summary>
+    public string Separator { get; set; }
     
     /// <summary>
     /// Creates an instance of MailContent.

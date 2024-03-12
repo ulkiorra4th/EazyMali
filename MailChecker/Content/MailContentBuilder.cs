@@ -8,19 +8,23 @@ public class MailContentBuilder : IMailContentBuilder
     private readonly IHtmlParser _htmlParser;
     
     public char InsertLinkSymbol { get; set; }
+    
+    public string Separator { get; set; }
 
     public MailContentBuilder()
     {
         _htmlParser = new HtmlParser();
         InsertLinkSymbol = '^';
+        Separator = "---";
     }
-    
-    public MailContentBuilder(char insertLinkSymbol)
+
+    public MailContentBuilder(char insertLinkSymbol, string separator) : this()
     {
-        _htmlParser = new HtmlParser();
         InsertLinkSymbol = insertLinkSymbol;
+        Separator = separator;
     }
-    
+
+
     public MailContent BuildMailContent(string subject, string body, string confirmationLink, bool isBodyHtml = false)
     {
         body = InsertConfirmLinkToBody(confirmationLink, body);
@@ -30,7 +34,7 @@ public class MailContentBuilder : IMailContentBuilder
     
     public MailContent BuildMailContentFromHtml(string htmlFilePath, string confirmationLink)
     {
-        var (subject, body) = _htmlParser.Parse(htmlFilePath);
+        var (subject, body) = _htmlParser.Parse(htmlFilePath, Separator);
         body = InsertConfirmLinkToBody(confirmationLink, body);
         
         return new MailContent(subject, body, isBodyHtml: true);
