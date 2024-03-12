@@ -2,6 +2,8 @@
 
   <h4><strong>MailChecker<strong> - is a utility that allows you to simply and quickly send emails with a link to confirm user's email</h4>
 
+<h1>Features</h1>
+
 <h1>How to use</h1>
 soon...
 
