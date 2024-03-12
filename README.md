@@ -15,5 +15,6 @@ soon...
   <list>
     <li>1.0.0</li>
     <li>1.0.1 - Added documentation to interfaces, made minor fixes, code was refactored</li>
+    <li>1.0.2 - Added new features (e.g. custom separator), made minor fixes</li>
       
   </list>
