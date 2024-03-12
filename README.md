@@ -9,8 +9,8 @@ soon
 soon
 
 <h1>Schema</h1>
-<img width="600" alt="image" src="https://github.com/ulkiorra4th/MailChecker/assets/93437745/e7356857-0676-45ea-827b-2dad4ab82a33">
 
+<img width="600" alt="image" src="https://github.com/ulkiorra4th/MailChecker/assets/93437745/a7beeceb-e876-4d4a-b64e-ed8a22bab0b5">
 
 <h1>Version history</h1>
 
