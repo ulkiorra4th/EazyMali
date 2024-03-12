@@ -5,10 +5,10 @@
 <h1>Features</h1>
 
 <h1>How to use</h1>
-soon...
+soon
 
 <h1>Schema</h1>
-soon...
+soon
 
 <h1>Version history</h1>
 
