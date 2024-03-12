@@ -8,7 +8,8 @@
 soon
 
 <h1>Schema</h1>
-soon
+<img width="600" alt="image" src="https://github.com/ulkiorra4th/MailChecker/assets/93437745/e7356857-0676-45ea-827b-2dad4ab82a33">
+
 
 <h1>Version history</h1>
 
