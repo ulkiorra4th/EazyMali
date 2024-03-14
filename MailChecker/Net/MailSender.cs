@@ -23,13 +23,21 @@ public class MailSender : IMailSender
     {
         ConfigureSmtp(smtpHost, smtpPort);
     }
+
+    public MailSender(string senderAddress, string displayName, string fromMailPassword) 
+        : this(new MailAddress(senderAddress, displayName), fromMailPassword)
+    { }
+    
+    public MailSender(string senderAddress, string displayName, string fromMailPassword, string smtpHost, int smtpPort) 
+        : this(new MailAddress(senderAddress, displayName), fromMailPassword, smtpHost, smtpPort)
+    { }
     
     public void ConfigureSmtp(string host, int port)
     {
         _smtpHost = host;
         _smtpPort = port;
     }
-
+    
     public async Task SendMailAsync(MailAddress to, MailContent content)
     {
         var message = new MailMessage(_fromAddress, to)
@@ -46,5 +54,10 @@ public class MailSender : IMailSender
             
             await smtp.SendMailAsync(message);
         }
+    }
+
+    public async Task SendMailAsync(string toMailAddress, MailContent content)
+    {
+        await SendMailAsync(new MailAddress(toMailAddress), content);
     }
 }

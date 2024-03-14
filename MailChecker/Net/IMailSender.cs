@@ -7,4 +7,5 @@ public interface IMailSender
 {
     public void ConfigureSmtp(string host, int port);
     public Task SendMailAsync(MailAddress to, MailContent content);
+    public Task SendMailAsync(string toMailAddress, MailContent content);
 }

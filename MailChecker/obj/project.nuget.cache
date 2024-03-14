@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "UFk2lpJu4eaYyKxAXM+bfTKeKL0fLnfEHOdFcpe7HfRC1SBMsnRolAvFlhlhMbiMhq48BZEAPVZaqEObHMw00w==",
+  "dgSpecHash": "mJKpsG/Y09PFfAj0lql+12uJdv3owfRrs41pxjRBosWcgxNDGKbS5v1Yfm58Jr2LHJ19xp9Wz19U0CDo8DO21A==",
   "success": true,
   "projectFilePath": "/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/MailChecker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ulkiorra/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/ulkiorra/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
