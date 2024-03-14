@@ -1,0 +1,12 @@
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/bin/Release/net7.0/MailChecker.deps.json
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/bin/Release/net7.0/MailChecker.dll
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/bin/Release/net7.0/MailChecker.pdb
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.AssemblyInfoInputs.cache
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.AssemblyInfo.cs
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.csproj.CoreCompileInputs.cache
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.sourcelink.json
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.dll
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/refint/MailChecker.dll
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/MailChecker.pdb
+/Users/ulkiorra/RiderProjects/MailChecker/MailChecker/obj/Release/net7.0/ref/MailChecker.dll
