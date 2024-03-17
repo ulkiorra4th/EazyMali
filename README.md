@@ -1,6 +1,9 @@
 <h1>MailChecker</h1>
 
-<h4><strong>MailChecker<strong> - is an utility that allows you to simply and quickly send emails with a link to confirm user's email</h4>
+<h4><strong>MailChecker<strong> - is an open-source free utility that allows you to simply and quickly send emails with a link to confirm user's email</h4>
+
+<h4><strong>Supported versions:</strong> .NET 6, .NET 7, .NET 8</h4>
+
 
 <h1>Features</h1>
 soon
