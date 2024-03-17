@@ -4,6 +4,9 @@ namespace MailChecker.Content.Data;
 
 internal class HtmlParser : IHtmlParser
 {
+    private const int SubjectIndex = 0;
+    private const int BodyIndex = 1;
+    
     public (string, string) Parse(string filePath, string separator)
     {
         if (!File.Exists(filePath)) throw new FileNotFoundException();
@@ -17,8 +20,8 @@ internal class HtmlParser : IHtmlParser
             if (splittedContent.Length != 2) 
                 throw new InvalidDataException("Header or body has not found in file");
 
-            string subject = splittedContent[0];
-            string body = splittedContent[1];
+            string subject = splittedContent[SubjectIndex];
+            string body = splittedContent[BodyIndex];
 
             return (subject, body);
         }
