@@ -18,5 +18,5 @@ soon
     <li>1.0.0</li>
     <li>1.0.1 - Added documentation to interfaces, made minor fixes, code was refactored</li>
     <li>1.0.2 - Added new features (e.g. custom separator), made minor fixes</li>
-      
+    <li>1.0.3 - Added new overloaded methods, so you can use them without using an instance of MailAddress</li>
   </list>
