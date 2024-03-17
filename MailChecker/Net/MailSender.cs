@@ -1,3 +1,4 @@
+using System.Data;
 using System.Net;
 using System.Net.Mail;
 using MailChecker.Content;
@@ -6,31 +7,51 @@ namespace MailChecker.Net;
 
 public class MailSender : IMailSender
 {
-    private readonly MailAddress _fromAddress;
-    private readonly string _fromMailPassword;
+    private MailAddress? _sender;
+    private string? _senderMailPassword;
     
     private string? _smtpHost;
     private int _smtpPort;
     
-    public MailSender(MailAddress fromAddress, string fromMailPassword)
+    public MailSender() { }
+    
+    public MailSender(MailAddress sender, string senderMailPassword)
     {
-        _fromAddress = fromAddress;
-        _fromMailPassword = fromMailPassword;
+        _sender = sender;
+        _senderMailPassword = senderMailPassword;
     }
 
-    public MailSender(MailAddress fromAddress, string fromMailPassword, string smtpHost, int smtpPort) :
-        this(fromAddress, fromMailPassword)
+    public MailSender(MailAddress sender, string senderMailPassword, string smtpHost, int smtpPort) :
+        this(sender, senderMailPassword)
     {
         ConfigureSmtp(smtpHost, smtpPort);
     }
 
-    public MailSender(string senderAddress, string displayName, string fromMailPassword) 
-        : this(new MailAddress(senderAddress, displayName), fromMailPassword)
+    public MailSender(string senderAddress, string displayName, string senderMailPassword) 
+        : this(new MailAddress(senderAddress, displayName), senderMailPassword)
     { }
     
-    public MailSender(string senderAddress, string displayName, string fromMailPassword, string smtpHost, int smtpPort) 
-        : this(new MailAddress(senderAddress, displayName), fromMailPassword, smtpHost, smtpPort)
+    public MailSender(string senderAddress, string displayName, string senderMailPassword, string smtpHost, int smtpPort) 
+        : this(new MailAddress(senderAddress, displayName), senderMailPassword, smtpHost, smtpPort)
     { }
+
+    public void ConfigureSender(string senderAddress, string displayName, string senderMailPassword, string host, 
+        int port)
+    {
+        SetSenderAddress(senderAddress, displayName, senderMailPassword);
+        ConfigureSmtp(host, port);
+    }
+
+    public void SetSenderAddress(string senderAddress, string displayName, string senderMailPassword)
+    {
+        SetSenderAddress(new MailAddress(senderAddress, displayName), senderMailPassword);
+    }
+
+    public void SetSenderAddress(MailAddress sender, string senderMailPassword)
+    {
+        _sender = sender;
+        _senderMailPassword = senderMailPassword;
+    }
     
     public void ConfigureSmtp(string host, int port)
     {
@@ -38,9 +59,9 @@ public class MailSender : IMailSender
         _smtpPort = port;
     }
     
-    public async Task SendMailAsync(MailAddress to, MailContent content)
+    public async Task SendMailAsync(MailAddress receiver, MailContent content)
     {
-        var message = new MailMessage(_fromAddress, to)
+        var message = new MailMessage(_sender ?? throw new DataException("Sender is null"), receiver)
         {
             Subject = content.Subject,
             Body = content.Body,
@@ -49,15 +70,15 @@ public class MailSender : IMailSender
         
         using (var smtp = new SmtpClient(_smtpHost, _smtpPort))
         {
-            smtp.Credentials = new NetworkCredential(_fromAddress.Address, _fromMailPassword);
+            smtp.Credentials = new NetworkCredential(_sender.Address, _senderMailPassword);
             smtp.EnableSsl = true;
             
             await smtp.SendMailAsync(message);
         }
     }
 
-    public async Task SendMailAsync(string toMailAddress, MailContent content)
+    public async Task SendMailAsync(string receiverMailAddress, MailContent content)
     {
-        await SendMailAsync(new MailAddress(toMailAddress), content);
+        await SendMailAsync(new MailAddress(receiverMailAddress), content);
     }
 }
