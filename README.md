@@ -1,6 +1,6 @@
 <h1>MailChecker</h1>
 
-  <h4><strong>MailChecker<strong> - is an utility that allows you to simply and quickly send emails with a link to confirm user's email</h4>
+<h4><strong>MailChecker<strong> - is an utility that allows you to simply and quickly send emails with a link to confirm user's email</h4>
 
 <h1>Features</h1>
 soon
@@ -19,4 +19,5 @@ soon
     <li>1.0.1 - Added documentation to interfaces, made minor fixes, code was refactored</li>
     <li>1.0.2 - Added new features (e.g. custom separator), made minor fixes</li>
     <li>1.0.3 - Added new overloaded methods, so you can use them without using an instance of MailAddress</li>
+    <li>1.0.4 - Added an overloaded constructor, so you can delegate creating an instance of a class to dependency injection</li>
   </list>
