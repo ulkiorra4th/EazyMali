@@ -6,7 +6,12 @@
 
 
 <h1>Features</h1>
-soon
+<list>
+  <li>Ability to send confirmation emails</li>
+  <li>HTML & CSS support</li>
+  <li>Ability to use a template from an HTML file</li>
+  <li>Ability to integrate the utility into an ASP.NET project (support for dependency injection)</li>
+</list>
 
 <h1>How to use</h1>
 soon
