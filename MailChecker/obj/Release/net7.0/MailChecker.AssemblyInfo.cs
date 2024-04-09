@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MailChecker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+135e8bd5f63063618833be184791513833752ffe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f9982ed2c90b009de3cb27c989061c6848de93d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MailChecker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MailChecker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

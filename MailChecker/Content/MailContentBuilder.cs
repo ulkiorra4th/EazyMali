@@ -23,8 +23,7 @@ public class MailContentBuilder : IMailContentBuilder
         InsertLinkSymbol = insertLinkSymbol;
         Separator = separator;
     }
-
-
+    
     public MailContent BuildMailContent(string subject, string body, string confirmationLink, bool isBodyHtml = false)
     {
         body = InsertConfirmLinkToBody(confirmationLink, body);
