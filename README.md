@@ -28,4 +28,5 @@ soon
     <li>1.0.2 - Added new features (e.g. custom separator), made minor fixes</li>
     <li>1.0.3 - Added new overloaded methods, so you can use them without using an instance of MailAddress</li>
     <li>1.0.4 - Added an overloaded constructor, so you can delegate creating an instance of a class to dependency injection</li>
+    <li>1.0.5 - Added extension method for DI</li>
   </list>
